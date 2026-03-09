@@ -1,5 +1,7 @@
 import 'inputUser.dart';
 
+List<String> riwayatBmi = [];
+
 void kalkulasi() {
   Map<String, double> data = inputBMI();
 
@@ -24,4 +26,8 @@ void kalkulasi() {
   print('Tinggi Badan : $tinggi cm');
   print('Skor BMI     : $hasilBmi');
   print('Status       : $status');
+
+  // hasil masuk ke dalam list riwayat secara otomatis
+  riwayatBmi.add("$berat, $tinggi, $status");
+  print('Data berhasil masuk ke riwayat bmi');
 }
