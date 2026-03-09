@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'kalkulasi.dart';
 
 void histori() {
   while (true) {
@@ -11,8 +12,26 @@ void histori() {
     }
 
     if (input == 'ya') {
+      print("-- Daftar Riwayat Perhitungan BMI --");
+      if (riwayatBmi.isEmpty) {
+        print('Belum ada data.');
+        break;
+      } else {
+        for (int i = 0; i < riwayatBmi.length; i++) {
+          print('${i + 1} = ${riwayatBmi[i]}');
+        }
+      }
     } else if (input == 'tidak') {
-      print('terimakasih sudah menggunakan sistem ini');
+      print('Terimakasih sudah menggunakan sistem ini');
+      break;
+    }
+
+    stdout.write("\nApakah ingin menghitung BMI lagi? (ya/tidak): ");
+    String? inputLagi = stdin.readLineSync()?.toLowerCase();
+    if (inputLagi == 'ya') {
+      kalkulasi();
+    } else if (inputLagi == 'tidak') {
+      print('Terimakasih sudah menggunakan sistem ini');
       break;
     } else {
       print('Invalid input, try again');

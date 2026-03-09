@@ -1,3 +1,4 @@
+import 'histori.dart';
 import 'kalkulasi.dart';
 
 void main() {
@@ -6,4 +7,5 @@ void main() {
   // bmi kalkulasi dan kategori hasil
   kalkulasi();
   // bmi history perhitungan
+  histori();
 }
