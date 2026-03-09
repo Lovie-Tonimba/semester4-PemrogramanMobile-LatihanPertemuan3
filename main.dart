@@ -1,9 +1,9 @@
-import 'inputUser.dart';
+import 'kalkulasi.dart';
 
 void main() {
   print("===== APLIKASI KALKULATOR BMI =====");
   // input user
-  inputBMI();
   // bmi kalkulasi dan kategori hasil
+  kalkulasi();
   // bmi history perhitungan
 }

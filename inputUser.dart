@@ -1,8 +1,6 @@
 import 'dart:io';
 
 Map<String, double> inputBMI() {
-  double berat = 0, tinggi = 0;
-
   while (true) {
     stdout.write("Masukkan berat (kg) : ");
     double inputB = double.tryParse(stdin.readLineSync() ?? "") ?? 0;
