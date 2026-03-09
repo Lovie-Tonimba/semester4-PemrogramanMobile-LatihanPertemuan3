@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void inputBMI() {
+Map<String, double> inputBMI() {
   double berat = 0, tinggi = 0;
 
   while (true) {
@@ -14,10 +14,7 @@ void inputBMI() {
       print("-----------------------------------------------");
       continue;
     } else {
-      berat = inputB;
-      tinggi = inputT;
-      print('Data berhasil disimpan\nBerat: $berat kg dan Tinggi: $tinggi cm');
-      break;
+      return {'berat': inputB, 'tinggi': inputT};
     }
   }
 }
